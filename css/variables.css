@@ -1,0 +1,28 @@
+:root {
+  --bg-0: #0a0713;
+  --bg-1: #140b26;
+  --pink: #ff5d9e;
+  --pink-2: #ff3d8f;
+  --purple: #8a4dff;
+  --purple-2: #6a2df0;
+  --gold: #ffd166;
+  --cream: #fdf4ff;
+  --muted: #b9aed0;
+  --card: #1a1230;
+
+  --font-baloo: 'Baloo 2', cursive;
+  --font-quicksand: 'Quicksand', sans-serif;
+  --font-urdu: 'Noto Nastaliq Urdu', serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-full: 999px;
+
+  --shadow-env: 0 20px 50px rgba(0,0,0,0.45);
+  --shadow-btn: 0 8px 24px rgba(255,61,143,0.35);
+  --shadow-btn-hover: 0 12px 30px rgba(138,77,255,0.45);
+  --shadow-card: 0 20px 50px rgba(0,0,0,0.5);
+
+  --transition-smooth: all .3s cubic-bezier(.22,1,.36,1);
+}

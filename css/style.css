@@ -1,0 +1,127 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  height: 100%;
+  background: var(--bg-0);
+  font-family: var(--font-quicksand);
+  color: var(--cream);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#stage-root {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 2;
+}
+
+/* ambient background */
+#bg-glow {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(138,77,255,0.35), transparent 45%),
+    radial-gradient(circle at 75% 75%, rgba(255,61,143,0.30), transparent 45%),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1));
+}
+
+/* overlay canvases */
+#star-canvas, #fx-canvas, #fx-canvas-2 {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none;
+  width: 100%; height: 100%;
+}
+
+.scene {
+  position: relative; z-index: 2;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  width: 100%;
+  max-width: 640px;
+  animation: fadeIn .8s ease both;
+}
+.scene.active { display: flex; }
+
+h1, h2 {
+  font-family: var(--font-baloo);
+  margin: 0 0 8px 0;
+  background: linear-gradient(90deg, var(--pink), var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: .5px;
+}
+h1 { font-size: clamp(24px, 7vw, 44px); }
+h2 { font-size: clamp(20px, 6vw, 32px); }
+
+p.sub {
+  color: var(--muted);
+  font-size: clamp(13px, 3.6vw, 16px);
+  margin: 0 0 24px 0;
+  padding: 0 8px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  font-family: var(--font-baloo);
+  font-size: clamp(14px, 4vw, 17px);
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 14px 28px;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--pink-2), var(--purple-2));
+  box-shadow: var(--shadow-btn);
+  transition: var(--transition-smooth);
+  max-width: 90vw;
+  white-space: normal;
+  position: relative;
+  overflow: hidden;
+}
+.btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: var(--shadow-btn-hover);
+}
+.btn:active { transform: translateY(0) scale(0.98); }
+.btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+/* ---------- Balloon row ---------- */
+.balloon-row {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  pointer-events: none;
+  z-index: 1;
+  padding-bottom: 0;
+}
+.balloon {
+  width: clamp(20px, 6vw, 34px);
+  height: clamp(26px, 7.4vw, 42px);
+  border-radius: 50% 50% 50% 50% / 58% 58% 42% 42%;
+  margin-bottom: -6px;
+  animation: bob 3.4s ease-in-out infinite;
+  box-shadow: inset -6px -6px 10px rgba(0,0,0,0.15), inset 4px 4px 8px rgba(255,255,255,0.25);
+}
+
+.name-line {
+  font-family: var(--font-baloo);
+  font-size: clamp(18px, 5.5vw, 22px);
+  color: var(--pink);
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+footer.tiny {
+  position: fixed; bottom: 10px; left: 0; right: 0;
+  text-align: center; font-size: 11px; color: rgba(185,174,208,0.35);
+  z-index: 2; padding: 0 10px;
+}

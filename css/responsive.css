@@ -1,0 +1,14 @@
+@media (max-width: 420px) {
+  .scene { padding: 18px 12px; }
+}
+
+@media (max-height: 560px) {
+  .cake-wrap { height: 110px; }
+  .gift-icon, .intro-orbit { margin-bottom: 12px; }
+  h1 { margin-bottom: 4px; }
+  p.sub { margin-bottom: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

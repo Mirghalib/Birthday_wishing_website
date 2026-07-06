@@ -1,0 +1,254 @@
+/* =========== PREMIUM UPGRADES =========== */
+
+/* Glassmorphism on gift icon */
+.gift-icon-premium {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow:
+    0 0 50px rgba(138,77,255,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+/* Glassmorphism photo card */
+.photo-card-glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+/* Premium button enhancements */
+.btn-premium {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent 50%);
+  pointer-events: none;
+}
+.btn-premium::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255,255,255,0.03) 30%,
+    transparent 60%
+  );
+  animation: shimmer 3s linear infinite;
+  background-size: 200% 100%;
+  pointer-events: none;
+}
+
+/* Cake shadows for realism */
+.cake-tier-shadow {
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.2),
+    inset 0 -1px 0 rgba(0,0,0,0.05);
+}
+
+/* Letter paper texture & ink effect */
+.letter-paper-premium {
+  position: relative;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 28px,
+      rgba(138,77,255,0.03) 28px,
+      rgba(138,77,255,0.03) 29px
+    ),
+    linear-gradient(180deg, #fff9fc, #fff1f8);
+}
+
+.letter-paper-premium .urdu,
+.letter-paper-premium .roman {
+  text-shadow: 0 1px 0 rgba(255,255,255,0.8);
+}
+
+/* Ink effect for letter text */
+.ink-text {
+  position: relative;
+}
+.ink-text::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: rgba(74,35,80,0.02);
+  pointer-events: none;
+}
+
+/* Glass reflections for envelope */
+.env-body-glass {
+  position: relative;
+  overflow: hidden;
+}
+.env-body-glass::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(
+    135deg,
+    transparent 30%,
+    rgba(255,255,255,0.08) 35%,
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
+/* Heart pulse animation for gift */
+.gift-heart-pulse {
+  position: relative;
+}
+.gift-heart-pulse::before {
+  content: '♥';
+  position: absolute;
+  font-size: 10px;
+  color: #ff5d9e;
+  top: 10px;
+  right: 12px;
+  animation: heartBeat 1.2s ease-in-out infinite;
+}
+
+/* Candle smoke effect */
+.candle-smoke {
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  background: rgba(200,200,200,0.05);
+  border-radius: 50%;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floatUp 2s ease-out infinite;
+  pointer-events: none;
+}
+
+/* Custom scrollbar for letter */
+.letter-paper::-webkit-scrollbar {
+  width: 4px;
+}
+.letter-paper::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.03);
+  border-radius: 4px;
+}
+.letter-paper::-webkit-scrollbar-thumb {
+  background: rgba(255,93,158,0.2);
+  border-radius: 4px;
+}
+
+/* Envelope flying animation */
+.envelope-fly-in {
+  animation: envelopeFlyIn 1.2s cubic-bezier(.34,1.56,.64,1) forwards;
+}
+
+@keyframes envelopeFlyIn {
+  0% {
+    transform: translateY(-100vh) rotate(-15deg) scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Letter paper unfolding */
+.letter-unfold {
+  animation: letterUnfold 0.8s cubic-bezier(.34,1.56,.64,1) forwards;
+  transform-origin: top center;
+}
+
+@keyframes letterUnfold {
+  0% {
+    transform: rotateX(-90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* Floating clouds background */
+.cloud-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.cloud {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 100px;
+  filter: blur(30px);
+  animation: cloudDrift 60s linear infinite;
+}
+.cloud:nth-child(1) {
+  top: 10%;
+  animation-duration: 45s;
+  width: 250px;
+}
+.cloud:nth-child(2) {
+  top: 25%;
+  animation-duration: 60s;
+  animation-delay: -20s;
+  width: 180px;
+}
+.cloud:nth-child(3) {
+  top: 15%;
+  animation-duration: 55s;
+  animation-delay: -40s;
+  width: 220px;
+}
+
+/* Finale particle effects */
+.finale-firework-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(138,77,255,0.05), transparent);
+  animation: finaleBreath 3s ease-in-out infinite;
+}
+
+@keyframes finaleBreath {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* Glow trails for scene transitions */
+.glow-trail {
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--pink), var(--purple), transparent);
+  opacity: 0;
+  z-index: 10;
+}
+.glow-trail-active {
+  animation: glowTrailAnim 1.2s ease-out forwards;
+}
+@keyframes glowTrailAnim {
+  0% { opacity: 0.8; transform: scaleY(1); }
+  100% { opacity: 0; transform: scaleY(0.2); }
+}
