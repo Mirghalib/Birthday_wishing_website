@@ -83,6 +83,36 @@
     }, 2000);
   });
 
+  // ---------- Scene-based music volume ----------
+  function adjustMusicForScene(sceneId) {
+    if (!window.setMusicVolume) return;
+    switch (sceneId) {
+      case 'scene-letter-open':
+        window.setMusicVolume(0.25); // lower during letter for focus
+        break;
+      case 'scene-final-image':
+        window.setMusicVolume(0.6); // raise for emotional ending
+        break;
+      default:
+        window.setMusicVolume(0.45); // default
+    }
+  }
+
+  // Watch for scene changes to adjust volume
+  const sceneObserver = new MutationObserver(() => {
+    for (const id of SCENE_IDS) {
+      const el = document.getElementById(id);
+      if (el && el.classList.contains('active')) {
+        adjustMusicForScene(id);
+        break;
+      }
+    }
+  });
+  SCENE_IDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) sceneObserver.observe(el, { attributes: true, attributeFilter: ['class'] });
+  });
+
   // ---------- Init ----------
   window.addEventListener('resize', () => {
     resizeCanvases();

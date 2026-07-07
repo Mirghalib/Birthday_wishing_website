@@ -71,7 +71,7 @@
     });
 
     // Enlarge cursor on hoverable elements
-    document.querySelectorAll('.btn, .envelope, .music-btn').forEach(el => {
+    document.querySelectorAll('.btn, .envelope').forEach(el => {
       el.addEventListener('mouseenter', () => {
         cursor.style.fontSize = '24px';
         cursor.style.color = 'rgba(255,209,102,0.7)';

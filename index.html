@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Happy Birthday My Love</title>
+
+<title>Happy Birthday Tehreem Jaan ❤️</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
 
 <!-- CSS -->
 <link rel="stylesheet" href="css/variables.css">
@@ -68,7 +69,8 @@
     </div>
     <div class="plate"></div>
     <h1 style="margin-top:18px;">Happy Birthday</h1>
-    <div class="name-line">My Love 💖</div>
+    <div class="name-line">Tehreem Jaan ❤️</div>
+    <div class="birthday-date">🎂 14 August 🎂</div>
     <p class="sub">🎉 It's your special day! 🎉</p>
     <button class="btn" id="btn-moments">See Our Moments →</button>
   </section>
@@ -76,29 +78,20 @@
   <!-- SCENE: Moments -->
   <section class="scene" id="scene-moments">
     <h1>Moments With You</h1>
-    <p class="sub">Beautiful moments with My Love 💕</p>
-    <div class="photo-card">
-      <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#ffb37a"/>
-            <stop offset="45%" stop-color="#ff8fae"/>
-            <stop offset="100%" stop-color="#a86bd6"/>
-          </linearGradient>
-        </defs>
-        <rect width="300" height="220" fill="url(#sky)"/>
-        <circle cx="150" cy="95" r="30" fill="#fff3d1" opacity="0.9"/>
-        <path d="M0,150 Q75,120 150,145 T300,140 V220 H0 Z" fill="#3d2b4a" opacity="0.9"/>
-        <ellipse cx="120" cy="205" rx="8" ry="18" fill="#2a1d34"/>
-        <ellipse cx="180" cy="200" rx="9" ry="20" fill="#2a1d34"/>
-        <circle cx="120" cy="170" r="12" fill="#2a1d34"/>
-        <circle cx="180" cy="168" r="13" fill="#2a1d34"/>
-        <rect x="112" y="178" width="16" height="24" rx="6" fill="#2a1d34"/>
-        <rect x="172" y="176" width="18" height="26" rx="6" fill="#2a1d34"/>
-        <circle cx="90" cy="60" r="2" fill="#fff" opacity="0.8"/>
-        <circle cx="230" cy="45" r="1.6" fill="#fff" opacity="0.7"/>
-        <circle cx="260" cy="90" r="1.8" fill="#fff" opacity="0.6"/>
-      </svg>
+    <p class="sub">Beautiful moments with Tehreem Jaan 💕</p>
+    <div class="memories-slideshow" id="memories-slideshow">
+      <div class="slide-viewport">
+        <div class="slide-track" id="slide-track">
+          <div class="slide card-slide" data-index="0"><div class="slide-img-wrap"><img class="slide-img" data-src="assets/images/image1.jpg" alt="Memory 1"></div><div class="slide-glass"></div></div>
+          <div class="slide card-slide" data-index="1"><div class="slide-img-wrap"><img class="slide-img" data-src="assets/images/image2.jpg" alt="Memory 2"></div><div class="slide-glass"></div></div>
+          <div class="slide card-slide" data-index="2"><div class="slide-img-wrap"><img class="slide-img" data-src="assets/images/image3.jpg" alt="Memory 3"></div><div class="slide-glass"></div></div>
+          <div class="slide card-slide" data-index="3"><div class="slide-img-wrap"><img class="slide-img" data-src="assets/images/image4.jpg" alt="Memory 4"></div><div class="slide-glass"></div></div>
+          <div class="slide card-slide" data-index="4"><div class="slide-img-wrap"><img class="slide-img" data-src="assets/images/image5.jpg" alt="Memory 5"></div><div class="slide-glass"></div></div>
+          <div class="slide card-slide" data-index="5"><div class="slide-img-wrap"><img class="slide-img" data-src="assets/images/image6.jpg" alt="Memory 6"></div><div class="slide-glass"></div></div>
+        </div>
+        <div class="slide-counter" id="slide-counter"><span id="slide-current">1</span> / 6</div>
+        <div class="slide-progress" id="slide-progress"><div class="slide-progress-bar" id="slide-progress-bar"></div></div>
+      </div>
     </div>
     <button class="btn" id="btn-letter">One Last Thing →</button>
   </section>
@@ -142,16 +135,67 @@
     </div>
   </section>
 
+  <!-- SCENE: Final Image — Cinematic Romantic Ending -->
+  <section class="scene" id="scene-final-image">
+    <div class="ending-backdrop"></div>
+    <div class="ending-image-wrap">
+      <img class="ending-img" src="assets/images/image7.jpg" alt="Tehreem Jaan">
+      <div class="ending-gradient-overlay"></div>
+    </div>
+    <canvas id="ending-particles-canvas"></canvas>
+
+    <!-- Phase 1: Main romantic typewriter message -->
+    <div class="ending-message" id="ending-message">
+      <div class="ending-heart-icon">❤️</div>
+      <p class="ending-line" data-delay="500">Thank You For Coming Into My Life.</p>
+      <p class="ending-line" data-delay="2500">Thank You For Making Every Day</p>
+      <p class="ending-line" data-delay="4000">Beautiful, Meaningful, And Full Of Happiness.</p>
+      <p class="ending-line" data-delay="6000">You Changed My World In Ways</p>
+      <p class="ending-line" data-delay="7500">Words Can Never Describe.</p>
+      <p class="ending-line" data-delay="9500">Every Moment With You</p>
+      <p class="ending-line" data-delay="11000">Has Become My Favorite Memory.</p>
+      <p class="ending-line" data-delay="13000">You Are My Happiness,</p>
+      <p class="ending-line" data-delay="14500">My Peace,</p>
+      <p class="ending-line" data-delay="16000">My Best Friend,</p>
+      <p class="ending-line" data-delay="17500">And My Forever.</p>
+      <p class="ending-line" data-delay="19500">I Pray That Allah Always Keeps</p>
+      <p class="ending-line" data-delay="21000">That Beautiful Smile On Your Face.</p>
+      <p class="ending-line ending-name-line" data-delay="23500">Happy Birthday,</p>
+      <p class="ending-line ending-name-line" data-delay="25500">My Beautiful Tehreem Jaan ❤️</p>
+      <p class="ending-line ending-love-line" data-delay="28000">I Love You Today,</p>
+      <p class="ending-line ending-love-line" data-delay="29500">Tomorrow,</p>
+      <p class="ending-line ending-love-line" data-delay="31000">And Forever.</p>
+      <div class="ending-heart-icon ending-heart-bottom" data-delay="33000">❤️</div>
+    </div>
+
+    <!-- Phase 2: Closing messages (shown after main message) -->
+    <div class="ending-closing" id="ending-closing" style="display:none;">
+      <div class="closing-frame" data-phase="1">
+        <p class="closing-divider">❤️</p>
+        <p class="closing-text">Forever Isn't Long Enough</p>
+        <p class="closing-text">When I'm With You.</p>
+        <p class="closing-divider">❤️</p>
+      </div>
+      <div class="closing-frame" data-phase="2">
+        <p class="closing-divider">❤️</p>
+        <p class="closing-text closing-big">Happy Birthday</p>
+        <p class="closing-text closing-big">Tehreem Jaan</p>
+        <p class="closing-divider">❤️</p>
+      </div>
+      <div class="closing-frame" data-phase="3">
+        <p class="closing-divider">❤️</p>
+        <p class="closing-text">Made With Endless Love,</p>
+        <p class="closing-text">Especially For You.</p>
+        <p class="closing-divider">❤️</p>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <div class="balloon-row" id="balloon-row"></div>
 
-<!-- Music Controls -->
-<div class="music-controls" id="music-controls" aria-label="Music controls">
-  <button class="music-btn" id="music-toggle" aria-label="Toggle music">🎵</button>
-</div>
-
-<footer class="tiny">made with 💗 for My Love</footer>
+<footer class="tiny">made with 💗 for Tehreem Jaan ❤️</footer>
 
 <!-- JavaScript -->
 <script src="js/scene-manager.js"></script>
@@ -164,6 +208,8 @@
 <script src="js/music.js"></script>
 <script src="js/effects.js"></script>
 <script src="js/finale.js"></script>
+<script src="js/memories.js"></script>
+<script src="js/final-scene.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

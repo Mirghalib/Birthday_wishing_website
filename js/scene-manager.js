@@ -5,7 +5,8 @@ const SCENE_IDS = [
   'scene-moments',
   'scene-letter-closed',
   'scene-letter-open',
-  'scene-finale'
+  'scene-finale',
+  'scene-final-image'
 ];
 
 function showScene(id) {

@@ -47,6 +47,17 @@
 
     // Store interval for cleanup
     window.__finaleInterval = confettiInterval;
+
+    // After fireworks complete, transition to final image scene
+    setTimeout(() => {
+      if (window.__finaleInterval) {
+        clearInterval(window.__finaleInterval);
+        window.__finaleInterval = null;
+      }
+      if (window.startFinalScene) {
+        window.startFinalScene();
+      }
+    }, 16000);
   }
 
   window.startFinale = startFinale;
